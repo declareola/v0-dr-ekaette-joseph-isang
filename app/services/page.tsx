@@ -276,6 +276,23 @@ export default function ServicesPage() {
                           <span className="text-sm text-muted-foreground">{item}</span>
                         </div>
                       ))}
+                      {isExpanded && (
+                        <div className="pt-4 mt-4 border-t">
+                          <a
+                            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <Button
+                              className={`w-full bg-${colorClass} hover:bg-${colorClass}/90 text-white font-semibold py-5 rounded-lg transition-all duration-300`}
+                            >
+                              Schedule Consultation
+                              <ArrowRight className="ml-2 h-4 w-4" />
+                            </Button>
+                          </a>
+                        </div>
+                      )}
                     </div>
                     <div
                       className={`flex items-center justify-between mt-4 pt-4 border-t ${isExpanded ? "" : "border-transparent"}`}
