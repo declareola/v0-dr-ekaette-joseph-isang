@@ -25,11 +25,9 @@ export function Header() {
   }, [isMenuOpen])
 
   const navItems = [
-    { name: "About", href: "/about" },
+    { name: "Thought Leadership", href: "/experience" },
     { name: "Services", href: "/services" },
-    { name: "Courses", href: "/courses" },
-    { name: "Experience", href: "/experience" },
-    { name: "Blog", href: "/blog" },
+    { name: "Trainings", href: "/courses" },
   ]
 
   return (
