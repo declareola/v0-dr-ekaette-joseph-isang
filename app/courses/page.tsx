@@ -164,7 +164,7 @@ export default function CoursesPage() {
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose RiteBridge Academy?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Dr. Ekaette Joseph-Isang?</h2>
             <p className="text-lg text-muted-foreground mb-12">
               Our programs are designed by healthcare industry experts with decades of experience.
             </p>
@@ -204,15 +204,15 @@ export default function CoursesPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Advance Your Career?</h2>
             <p className="text-xl text-primary-foreground/90 mb-8">
-              Visit RiteBridge Academy to explore all courses and enrollment options.
+              Schedule a consultation to discuss which training option is best for you.
             </p>
             <Button
               size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-10 py-6 text-lg rounded-full"
               asChild
             >
-              <a href="https://ritebridgeacademy.com/" target="_blank" rel="noopener noreferrer">
-                Visit RiteBridge Academy
+              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj" target="_blank" rel="noopener noreferrer">
+                Schedule Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </Button>
