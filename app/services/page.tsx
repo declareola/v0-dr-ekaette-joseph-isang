@@ -265,7 +265,7 @@ export default function ServicesPage() {
                   </CardHeader>
                   <CardContent>
                     <div
-                      className={`space-y-2 overflow-visible transition-all duration-500 ${isExpanded ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"}`}
+                      className={`space-y-2 overflow-hidden transition-all duration-500 ${isExpanded ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
                     >
                       {service.items.map((item, idx) => (
                         <div
@@ -277,19 +277,15 @@ export default function ServicesPage() {
                         </div>
                       ))}
                       {isExpanded && (
-                        <div className="pt-6 mt-6 border-t">
+                        <div className="pt-4 mt-4 border-t">
                           <a
                             href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj"
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={(e) => e.stopPropagation()}
-                            className="block"
                           >
                             <Button
-                              className="w-full font-semibold py-6 rounded-lg transition-all duration-300"
-                              style={{
-                                backgroundColor: colors[colorClass],
-                              }}
+                              className={`w-full bg-${colorClass} hover:bg-${colorClass}/90 text-white font-semibold py-5 rounded-lg transition-all duration-300`}
                             >
                               Schedule Consultation
                               <ArrowRight className="ml-2 h-4 w-4" />
