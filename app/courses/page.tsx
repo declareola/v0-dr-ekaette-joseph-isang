@@ -12,7 +12,7 @@ export default function CoursesPage() {
       description:
         "Prepare for either an inpatient or outpatient coding career. Receive exam prep, extensive real-world experience, support and more to help you confidently start your medical coding career.",
       price: "$2,000",
-      duration: "Self-paced",
+      duration: "",
       features: [
         "Learn inpatient coding",
         "Option to add-on outpatient coding",
@@ -24,8 +24,8 @@ export default function CoursesPage() {
         "Coding community access",
         "One year access to live sessions",
       ],
-      cta: "Enroll Now",
-      link: "https://ritebridgeacademy.com/",
+      cta: "Schedule Consultation",
+      link: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj",
       popular: false,
     },
     {
@@ -35,7 +35,7 @@ export default function CoursesPage() {
       description:
         "This is a complete career revamp. It provides exam prep, real-world experience, personalized support and more to help you confidently start your career as a CDI specialist.",
       price: "$2,500",
-      duration: "8 weeks",
+      duration: "",
       features: [
         "8-Week CDI Career Launch",
         "Tailored for physicians",
@@ -46,8 +46,8 @@ export default function CoursesPage() {
         "Career readiness toolkit",
         "Work-ready templates",
       ],
-      cta: "Enroll Now",
-      link: "https://ritebridgeacademy.com/",
+      cta: "Schedule Consultation",
+      link: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj",
       popular: true,
     },
     {
@@ -57,7 +57,7 @@ export default function CoursesPage() {
       description:
         "The A.C.T.I.O.N Pathway program is designed for healthcare professionals ready to level up their careers. Transform your expertise into leadership positions with our comprehensive 10-week program.",
       price: "$10,000",
-      duration: "10 weeks",
+      duration: "",
       features: [
         "Career assessment and goal setting",
         "In-demand healthcare certifications",
@@ -68,10 +68,10 @@ export default function CoursesPage() {
         "Monthly group coaching",
         "1:1 personalized coaching available",
       ],
-      cta: "Learn More",
-      link: "/action-pathway",
+      cta: "Schedule Consultation",
+      link: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj",
       popular: false,
-      isInternal: true,
+      isInternal: false,
     },
   ]
 
@@ -87,16 +87,12 @@ export default function CoursesPage() {
           <div className="max-w-4xl mx-auto text-center">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors mr-1.5"
+              className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
               Back to Home
             </Link>
-            <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 ml-2.5">
-              <Sparkles className="w-5 h-5 text-accent" />
-              <span className="text-sm font-medium">RiteBridge Academy</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Professional Courses</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Available Trainings</h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed mb-4">
               Advance Your Healthcare Career
             </p>
@@ -133,7 +129,7 @@ export default function CoursesPage() {
                       <span className={`text-4xl font-bold ${course.popular ? "text-accent" : "text-primary"}`}>
                         {course.price}
                       </span>
-                      <span className="text-muted-foreground ml-2">/ {course.duration}</span>
+                      {course.duration && <span className="text-muted-foreground ml-2">/ {course.duration}</span>}
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4 flex-1 flex flex-col">
@@ -147,26 +143,15 @@ export default function CoursesPage() {
                         </li>
                       ))}
                     </ul>
-                    {course.isInternal ? (
-                      <Link href={course.link} className="w-full">
-                        <Button
-                          className={`w-full ${course.popular ? "bg-accent hover:bg-accent/90 text-accent-foreground" : "bg-primary hover:bg-primary/90"} rounded-full`}
-                        >
-                          {course.cta}
-                          <ArrowRight className="ml-2 w-4 h-4" />
-                        </Button>
-                      </Link>
-                    ) : (
-                      <Button
-                        className={`w-full ${course.popular ? "bg-accent hover:bg-accent/90 text-accent-foreground" : "bg-primary hover:bg-primary/90"} rounded-full`}
-                        asChild
-                      >
-                        <a href={course.link} target="_blank" rel="noopener noreferrer">
-                          {course.cta}
-                          <ArrowRight className="ml-2 w-4 h-4" />
-                        </a>
-                      </Button>
-                    )}
+                    <Button
+                      className={`w-full ${course.popular ? "bg-accent hover:bg-accent/90 text-accent-foreground" : "bg-primary hover:bg-primary/90"} rounded-full`}
+                      asChild
+                    >
+                      <a href={course.link} target="_blank" rel="noopener noreferrer">
+                        {course.cta}
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </a>
+                    </Button>
                   </CardContent>
                 </Card>
               ))}
