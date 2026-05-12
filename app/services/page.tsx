@@ -207,7 +207,7 @@ export default function ServicesPage() {
               <ArrowLeft className="h-4 w-4" />
               Back to Home
             </Link>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary-foreground">Our Services</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary-foreground">Services</h1>
             <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
               Comprehensive healthcare consulting and professional development services
             </p>
@@ -221,19 +221,6 @@ export default function ServicesPage() {
         <div className="absolute top-1/2 right-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl -z-10 animate-blob animation-delay-2000" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              <Lightbulb className="h-4 w-4" />
-              Comprehensive Solutions
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              Our <span className="gradient-text">Service Offerings</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Explore our comprehensive range of healthcare consulting and professional development services
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-6 mb-16">
             {services.map((service, index) => {
               const Icon = service.icon
