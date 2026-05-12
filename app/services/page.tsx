@@ -207,7 +207,7 @@ export default function ServicesPage() {
               <ArrowLeft className="h-4 w-4" />
               Back to Home
             </Link>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary-foreground">Services Offerings</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary-foreground">Service Offerings</h1>
             <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
               Comprehensive healthcare consulting and professional development services
             </p>
