@@ -164,9 +164,9 @@ export default function CoursesPage() {
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Dr. Ekaette Joseph-Isang?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose to work with Dr. Ekaette Joseph-Isang?</h2>
             <p className="text-lg text-muted-foreground mb-12">
-              Our programs are designed by healthcare industry experts with decades of experience.
+              Our programs are designed by her alongside healthcare industry experts with decades of experience.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {[
