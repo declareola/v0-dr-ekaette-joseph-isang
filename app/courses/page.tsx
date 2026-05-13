@@ -7,46 +7,47 @@ export default function CoursesPage() {
   const courses = [
     {
       id: "medical-coding",
-      title: "Medical Coding",
+      title: "Medical Coding Training",
       icon: FileText,
       description:
-        "Master the fundamentals of medical coding with comprehensive training in ICD-10-CM, CPT, and HCPCS Level II coding systems. Learn to accurately assign codes for diagnoses, procedures, and services.",
-      price: "$2,500",
-      duration: "8 weeks",
+        "Prepare for either an inpatient or outpatient coding career. Receive exam prep, extensive real-world experience, support and more to help you confidently start your medical coding career.",
+      price: "$2,000",
+      duration: "",
       features: [
-        "ICD-10-CM diagnosis coding fundamentals",
-        "CPT procedural coding mastery",
-        "HCPCS Level II coding for supplies and services",
-        "Hands-on coding exercises with real case studies",
-        "CPC exam preparation materials",
-        "Access to coding software and tools",
-        "Weekly live Q&A sessions",
-        "Certificate of completion",
+        "Learn inpatient coding",
+        "Option to add-on outpatient coding",
+        "Coding exam prep",
+        "Coding career prep",
+        "Includes hands on practice",
+        "Career readiness toolkit",
+        "Coding exercises",
+        "Coding community access",
+        "One year access to live sessions",
       ],
-      cta: "Enroll Now",
-      link: "https://ritebridgeacademy.com/",
+      cta: "Schedule Consultation",
+      link: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj",
       popular: false,
     },
     {
       id: "cdi",
-      title: "Clinical Documentation Improvement (CDI)",
+      title: "Clinical Documentation Integrity (CDI) Training",
       icon: BookOpen,
       description:
-        "Become a CDI specialist and learn to bridge the gap between clinical care and accurate documentation. Master the skills needed to improve documentation quality, ensure coding accuracy, and optimize reimbursement.",
-      price: "$3,500",
-      duration: "10 weeks",
+        "This is a complete career revamp. It provides exam prep, real-world experience, personalized support and more to help you confidently start your career as a CDI specialist.",
+      price: "$2,500",
+      duration: "",
       features: [
-        "CDI fundamentals and best practices",
-        "Query writing and physician communication",
-        "Clinical validation and documentation review",
-        "Risk adjustment and HCC coding",
-        "DRG optimization strategies",
-        "CDIP certification exam preparation",
-        "Real-world case study analysis",
-        "Monthly group coaching calls",
+        "8-Week CDI Career Launch",
+        "Tailored for physicians",
+        "Pass your exams",
+        "Master the skills",
+        "Become a CDI specialist",
+        "Includes Coding 101",
+        "Career readiness toolkit",
+        "Work-ready templates",
       ],
-      cta: "Enroll Now",
-      link: "https://ritebridgeacademy.com/",
+      cta: "Schedule Consultation",
+      link: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj",
       popular: true,
     },
     {
@@ -56,7 +57,7 @@ export default function CoursesPage() {
       description:
         "The A.C.T.I.O.N Pathway program is designed for healthcare professionals ready to level up their careers. Transform your expertise into leadership positions with our comprehensive 10-week program.",
       price: "$10,000",
-      duration: "10 weeks",
+      duration: "",
       features: [
         "Career assessment and goal setting",
         "In-demand healthcare certifications",
@@ -67,10 +68,10 @@ export default function CoursesPage() {
         "Monthly group coaching",
         "1:1 personalized coaching available",
       ],
-      cta: "Learn More",
-      link: "/action-pathway",
+      cta: "Schedule Consultation",
+      link: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj",
       popular: false,
-      isInternal: true,
+      isInternal: false,
     },
   ]
 
@@ -86,16 +87,12 @@ export default function CoursesPage() {
           <div className="max-w-4xl mx-auto text-center">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors mr-1.5"
+              className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors"
             >
               <ArrowLeft className="h-4 w-4" />
               Back to Home
             </Link>
-            <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 ml-2.5">
-              <Sparkles className="w-5 h-5 text-accent" />
-              <span className="text-sm font-medium">RiteBridge Academy</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Professional Courses</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">Available Trainings</h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed mb-4">
               Advance Your Healthcare Career
             </p>
@@ -132,7 +129,7 @@ export default function CoursesPage() {
                       <span className={`text-4xl font-bold ${course.popular ? "text-accent" : "text-primary"}`}>
                         {course.price}
                       </span>
-                      <span className="text-muted-foreground ml-2">/ {course.duration}</span>
+                      {course.duration && <span className="text-muted-foreground ml-2">/ {course.duration}</span>}
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4 flex-1 flex flex-col">
@@ -146,26 +143,15 @@ export default function CoursesPage() {
                         </li>
                       ))}
                     </ul>
-                    {course.isInternal ? (
-                      <Link href={course.link} className="w-full">
-                        <Button
-                          className={`w-full ${course.popular ? "bg-accent hover:bg-accent/90 text-accent-foreground" : "bg-primary hover:bg-primary/90"} rounded-full`}
-                        >
-                          {course.cta}
-                          <ArrowRight className="ml-2 w-4 h-4" />
-                        </Button>
-                      </Link>
-                    ) : (
-                      <Button
-                        className={`w-full ${course.popular ? "bg-accent hover:bg-accent/90 text-accent-foreground" : "bg-primary hover:bg-primary/90"} rounded-full`}
-                        asChild
-                      >
-                        <a href={course.link} target="_blank" rel="noopener noreferrer">
-                          {course.cta}
-                          <ArrowRight className="ml-2 w-4 h-4" />
-                        </a>
-                      </Button>
-                    )}
+                    <Button
+                      className={`w-full ${course.popular ? "bg-accent hover:bg-accent/90 text-accent-foreground" : "bg-primary hover:bg-primary/90"} rounded-full`}
+                      asChild
+                    >
+                      <a href={course.link} target="_blank" rel="noopener noreferrer">
+                        {course.cta}
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </a>
+                    </Button>
                   </CardContent>
                 </Card>
               ))}
@@ -178,9 +164,9 @@ export default function CoursesPage() {
       <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose RiteBridge Academy?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose to work with Dr. Ekaette Joseph-Isang?</h2>
             <p className="text-lg text-muted-foreground mb-12">
-              Our programs are designed by healthcare industry experts with decades of experience.
+              Our programs are designed by her alongside healthcare industry experts with decades of experience.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {[
@@ -218,15 +204,15 @@ export default function CoursesPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Advance Your Career?</h2>
             <p className="text-xl text-primary-foreground/90 mb-8">
-              Visit RiteBridge Academy to explore all courses and enrollment options.
+              Schedule a consultation to discuss which training option is best for you.
             </p>
             <Button
               size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-10 py-6 text-lg rounded-full"
               asChild
             >
-              <a href="https://ritebridgeacademy.com/" target="_blank" rel="noopener noreferrer">
-                Visit RiteBridge Academy
+              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj" target="_blank" rel="noopener noreferrer">
+                Schedule Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </Button>

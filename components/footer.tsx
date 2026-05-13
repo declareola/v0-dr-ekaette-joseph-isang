@@ -46,14 +46,14 @@ export function Footer() {
 
   return (
     <footer className="bg-secondary text-secondary-foreground">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 lg:gap-12">
           {/* Company Info */}
-          <div className="space-y-3">
-            <div className="text-2xl font-semibold">
+          <div className="space-y-4">
+            <div className="text-lg sm:text-xl font-semibold whitespace-nowrap overflow-hidden">
               Dr.<span className="font-medium text-background"> Ekaette Joseph-Isang</span>
             </div>
-            <div className="space-y-2 text-sm">
+            <div className="space-y-3 text-base">
               <a
                 href="tel:770-572-1066"
                 className="flex items-center gap-2 text-secondary-foreground/80 hover:text-accent transition-colors"
@@ -73,7 +73,7 @@ export function Footer() {
                 <span>996 E New Circle Rd, Lexington KY 40505</span>
               </div>
             </div>
-            <div className="flex space-x-4 pt-2">
+            <div className="flex space-x-4 pt-3">
               <Link
                 href="https://www.linkedin.com/in/ejisang"
                 target="_blank"
@@ -83,14 +83,6 @@ export function Footer() {
                 <Linkedin className="h-5 w-5" />
               </Link>
               <Link
-                href="https://web.facebook.com/RiteBridge"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-secondary-foreground/60 hover:text-accent transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link
                 href="https://www.youtube.com/@ritebridgeconsultants"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -98,21 +90,13 @@ export function Footer() {
               >
                 <Youtube className="h-5 w-5" />
               </Link>
-              <Link
-                href="https://ritebridge.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-secondary-foreground/60 hover:text-accent transition-colors"
-              >
-                <Globe className="h-5 w-5" />
-              </Link>
             </div>
           </div>
 
           {/* Services */}
-          <div className="space-y-3">
-            <h3 className="text-lg font-semibold">Services</h3>
-            <ul className="space-y-1.5 text-sm">
+          <div className="space-y-4 lg:pl-4">
+            <h3 className="text-xl font-semibold">Services</h3>
+            <ul className="space-y-2 text-base">
               <li>
                 <Link href="/services" className="text-secondary-foreground/80 hover:text-accent transition-colors">
                   All Services
@@ -133,16 +117,16 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/courses" className="text-secondary-foreground/80 hover:text-accent transition-colors">
-                  Training Courses
+                  Trainings
                 </Link>
               </li>
             </ul>
           </div>
 
           {/* Resources */}
-          <div className="space-y-3">
-            <h3 className="text-lg font-semibold">Resources</h3>
-            <ul className="space-y-1.5 text-sm">
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold">Resources</h3>
+            <ul className="space-y-2 text-base">
               <li>
                 <Link href="/blog" className="text-secondary-foreground/80 hover:text-accent transition-colors">
                   Blog
@@ -155,20 +139,20 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/experience" className="text-secondary-foreground/80 hover:text-accent transition-colors">
-                  Experience
+                  Thought Leadership
                 </Link>
               </li>
             </ul>
           </div>
 
           {/* Newsletter */}
-          <div className="space-y-3">
-            <h3 className="text-lg font-semibold">Stay Connected</h3>
-            <p className="text-secondary-foreground/80 text-sm">Subscribe to receive healthcare strategy insights.</p>
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold">Stay Connected</h3>
+            <p className="text-secondary-foreground/80 text-base leading-relaxed">Subscribe to receive healthcare strategy insights.</p>
             {subscribed ? (
               <div className="flex items-center gap-2 text-accent animate-fade-in">
                 <CheckCircle className="h-5 w-5" />
-                <span className="text-sm">Subscribed successfully!</span>
+                <span className="text-base">Subscribed successfully!</span>
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="space-y-2">
@@ -178,13 +162,13 @@ export function Footer() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="bg-secondary-foreground/10 border-secondary-foreground/20 text-secondary-foreground placeholder:text-secondary-foreground/60 h-9"
+                  className="bg-secondary-foreground/10 border-secondary-foreground/20 text-secondary-foreground placeholder:text-secondary-foreground/60 h-10 text-base"
                 />
-                {error && <p className="text-red-400 text-xs">{error}</p>}
+                {error && <p className="text-red-400 text-sm">{error}</p>}
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold h-9"
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold h-10 text-base"
                 >
                   {isSubmitting ? (
                     <>
@@ -203,10 +187,10 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-secondary-foreground/20 mt-4 pt-3">
           <div className="flex flex-col md:flex-row justify-between items-center gap-2">
-            <div className="text-sm text-secondary-foreground/60">
+            <div className="text-base text-secondary-foreground/60 whitespace-nowrap">
               © 2026 Dr. Ekaette Joseph-Isang. All rights reserved.
             </div>
-            <div className="flex items-center gap-6 text-sm">
+            <div className="flex items-center gap-6 text-base">
               <Link href="/terms" className="text-secondary-foreground/60 hover:text-accent transition-colors">
                 Terms of Service
               </Link>

@@ -14,9 +14,9 @@ import {
   TrendingUp,
   Heart,
   Building2,
-  Brain,
+  Lightbulb,
   BarChart3,
-  Cpu,
+  Zap,
   Rocket,
   ArrowRight,
   ChevronDown,
@@ -142,7 +142,7 @@ const services = [
   {
     id: 8,
     title: "AI, Data Science, & Clinical Technology Consulting",
-    icon: Cpu,
+    icon: Zap,
     color: "secondary",
     description: "Clinical validation and implementation support for AI-powered healthcare solutions.",
     items: [
@@ -207,7 +207,7 @@ export default function ServicesPage() {
               <ArrowLeft className="h-4 w-4" />
               Back to Home
             </Link>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary-foreground">Our Services</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary-foreground">Service Offerings</h1>
             <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
               Comprehensive healthcare consulting and professional development services
             </p>
@@ -221,19 +221,6 @@ export default function ServicesPage() {
         <div className="absolute top-1/2 right-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl -z-10 animate-blob animation-delay-2000" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              <Brain className="h-4 w-4" />
-              Comprehensive Solutions
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              Our <span className="gradient-text">Service Offerings</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Explore our comprehensive range of healthcare consulting and professional development services
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-6 mb-16">
             {services.map((service, index) => {
               const Icon = service.icon
@@ -276,6 +263,23 @@ export default function ServicesPage() {
                           <span className="text-sm text-muted-foreground">{item}</span>
                         </div>
                       ))}
+                      {isExpanded && (
+                        <div className="pt-4 mt-4 border-t">
+                          <a
+                            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <Button
+                              className={`w-full bg-${colorClass} hover:bg-${colorClass}/90 text-white font-semibold py-5 rounded-lg transition-all duration-300`}
+                            >
+                              Schedule Consultation
+                              <ArrowRight className="ml-2 h-4 w-4" />
+                            </Button>
+                          </a>
+                        </div>
+                      )}
                     </div>
                     <div
                       className={`flex items-center justify-between mt-4 pt-4 border-t ${isExpanded ? "" : "border-transparent"}`}
@@ -297,50 +301,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Quick Access Links */}
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Quick Access</h2>
-            <p className="text-muted-foreground">Explore specialized service categories</p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            <Link href="/organizations" className="group">
-              <div className="p-6 rounded-2xl bg-background border-2 hover:border-primary transition-all duration-300 hover:shadow-lg text-center">
-                <Users className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                <h3 className="font-semibold group-hover:text-primary transition-colors whitespace-nowrap">
-                  Organizational Solutions
-                </h3>
-              </div>
-            </Link>
-            <Link href="/coaching" className="group">
-              <div className="p-6 rounded-2xl bg-background border-2 hover:border-secondary transition-all duration-300 hover:shadow-lg text-center">
-                <Target className="h-8 w-8 text-secondary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                <h3 className="font-semibold group-hover:text-secondary transition-colors">Individual Coaching</h3>
-              </div>
-            </Link>
-            <Link href="/training" className="group">
-              <div className="p-6 rounded-2xl bg-background border-2 hover:border-primary transition-all duration-300 hover:shadow-lg text-center">
-                <GraduationCap className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                <h3 className="font-semibold group-hover:text-primary transition-colors">Online Training</h3>
-              </div>
-            </Link>
-            <Link href="/certification" className="group">
-              <div className="p-6 rounded-2xl bg-background border-2 hover:border-secondary transition-all duration-300 hover:shadow-lg text-center">
-                <Shield className="h-8 w-8 text-secondary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                <h3 className="font-semibold group-hover:text-secondary transition-colors">Certification</h3>
-              </div>
-            </Link>
-            <Link href="/assessment" className="group">
-              <div className="p-6 rounded-2xl bg-background border-2 hover:border-primary transition-all duration-300 hover:shadow-lg text-center">
-                <FileText className="h-8 w-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                <h3 className="font-semibold group-hover:text-primary transition-colors">Assessment</h3>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Credentials Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-muted/50 to-transparent" />
@@ -350,12 +310,14 @@ export default function ServicesPage() {
             <p className="text-xl text-muted-foreground">Certified expertise across multiple healthcare domains</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
+              { badge: "MD", title: "Doctor of Medicine" },
+              { badge: "MBA", title: "Master of Business Administration" },
+              { badge: "MPH", title: "Master of Public Health" },
               { badge: "CPHQ", title: "Certified Professional in Healthcare Quality" },
               { badge: "CDIP", title: "Certified Documentation Integrity Practitioner" },
-              { badge: "CCS", title: "Certified Coding Specialist" },
-              { badge: "CRC", title: "Certified Risk Adjustment Coder" },
+              { badge: "PAHM", title: "Physician Advisor, Healthcare Management" },
             ].map((cred, index) => (
               <div
                 key={index}

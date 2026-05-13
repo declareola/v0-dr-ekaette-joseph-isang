@@ -67,8 +67,8 @@ export function ContactSection() {
                     <Mail className="h-5 w-5 text-primary group-hover:text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-muted-foreground">Email</p>
-                    <p className="text-foreground font-medium">ejosephisang@ritebridge.com</p>
+                    <p className="text-base font-medium text-muted-foreground">Email</p>
+                    <p className="text-lg text-foreground font-medium">ejosephisang@ritebridge.com</p>
                   </div>
                 </a>
 
@@ -80,8 +80,8 @@ export function ContactSection() {
                     <Phone className="h-5 w-5 text-primary group-hover:text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-muted-foreground">Phone</p>
-                    <p className="text-foreground font-medium">770-572-1066</p>
+                    <p className="text-base font-medium text-muted-foreground">Phone</p>
+                    <p className="text-lg text-foreground font-medium">770-572-1066</p>
                   </div>
                 </a>
 
@@ -90,8 +90,8 @@ export function ContactSection() {
                     <MapPin className="h-5 w-5 text-primary group-hover:text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-muted-foreground">Office</p>
-                    <p className="text-foreground font-medium">996 E New Circle Rd, Lexington KY 40505</p>
+                    <p className="text-base font-medium text-muted-foreground">Office</p>
+                    <p className="text-lg text-foreground font-medium">996 E New Circle Rd, Lexington KY 40505</p>
                   </div>
                 </div>
 
@@ -106,15 +106,6 @@ export function ContactSection() {
                     <span className="font-medium">LinkedIn</span>
                   </Link>
                   <Link
-                    href="https://web.facebook.com/RiteBridge"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 p-3 rounded-lg border border-border hover:border-primary hover:text-primary transition-all hover:shadow-md group"
-                  >
-                    <Facebook className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
-                    <span className="font-medium">Facebook</span>
-                  </Link>
-                  <Link
                     href="https://www.youtube.com/@ritebridgeconsultants"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -123,22 +114,13 @@ export function ContactSection() {
                     <Youtube className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
                     <span className="font-medium">YouTube</span>
                   </Link>
-                  <Link
-                    href="https://ritebridge.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 p-3 rounded-lg border border-border hover:border-primary hover:text-primary transition-all hover:shadow-md group"
-                  >
-                    <Globe className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
-                    <span className="font-medium">Website</span>
-                  </Link>
                 </div>
               </CardContent>
             </Card>
 
             <div className="space-y-4 pt-4">
               <a
-                href="https://calendar.app.google/VWSK6szrzCfvSMn1A"
+                href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0POpmmqtCOnoWSRqQtmriyEAFkkXrcpIhRMDGVygXPrk42Kmw6b6lVtSUNK36XBKbsKr6EA0vj"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
