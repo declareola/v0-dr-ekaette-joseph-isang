@@ -47,7 +47,6 @@ export function HeroSection() {
               <Sparkles className="h-5 w-5 text-accent animate-spin-slow" />
               <span className="text-lg sm:text-xl font-medium">Healthcare Innovation Leader</span>
             </div>
-
             <div className="space-y-4">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight text-balance animate-fade-in-up whitespace-nowrap overflow-hidden">
                 Dr. Ekaette Joseph-Isang
@@ -61,12 +60,10 @@ export function HeroSection() {
                 </h3>
               </div>
             </div>
-
             <p className="text-lg sm:text-xl lg:text-2xl leading-relaxed text-white/90 max-w-3xl animate-fade-in-up animate-delay-300">
               Healthcare executive and strategic advisor with{" "}
               <span className="font-semibold text-accent">20+ years</span> of combined experience scaling value-based care, risk adjustment, and population health programs. Expert in aligning clinical strategy, operations, and technology to drive sustainable outcomes, regulatory readiness, and ethical innovation.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 pt-6 animate-fade-in-up animate-delay-400">
               <a href="https://calendar.app.google/VWSK6szrzCfvSMn1A" target="_blank" rel="noopener noreferrer">
                 <Button
@@ -87,7 +84,6 @@ export function HeroSection() {
                 </Button>
               </a>
             </div>
-
             <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 pt-8 animate-fade-in-up animate-delay-500">
               <div className="glass rounded-lg sm:rounded-2xl p-3 sm:p-4 lg:p-6 text-center elevated-card hover:scale-105 transition-transform duration-300">
                 <div className="flex items-center justify-center mb-2 sm:mb-3">

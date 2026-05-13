@@ -83,28 +83,12 @@ export function Footer() {
                 <Linkedin className="h-5 w-5" />
               </Link>
               <Link
-                href="https://web.facebook.com/RiteBridge"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-secondary-foreground/60 hover:text-accent transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link
                 href="https://www.youtube.com/@ritebridgeconsultants"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-secondary-foreground/60 hover:text-accent transition-colors"
               >
                 <Youtube className="h-5 w-5" />
-              </Link>
-              <Link
-                href="https://ritebridge.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-secondary-foreground/60 hover:text-accent transition-colors"
-              >
-                <Globe className="h-5 w-5" />
               </Link>
             </div>
           </div>
@@ -133,7 +117,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/courses" className="text-secondary-foreground/80 hover:text-accent transition-colors">
-                  Training Courses
+                  Trainings
                 </Link>
               </li>
             </ul>
@@ -155,7 +139,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/experience" className="text-secondary-foreground/80 hover:text-accent transition-colors">
-                  Experience
+                  Thought Leadership
                 </Link>
               </li>
             </ul>

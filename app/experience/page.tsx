@@ -257,6 +257,140 @@ export default function ExperiencePage() {
         </div>
       </section>
 
+      {/* Podcasts and Conferences */}
+      <section className="py-20 bg-muted/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Podcasts and Conferences</h2>
+            <p className="text-xl text-muted-foreground">Featured appearances and speaking engagements</p>
+          </div>
+
+          {/* Podcasts */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold mb-8">Podcast Appearances</h3>
+            <div className="space-y-4 overflow-x-auto">
+              <div className="grid gap-4">
+                <Card className="hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                      <div className="flex-1">
+                        <CardTitle>How Women Pivot & They Find Their True Passion with Dr. Ekaette Joseph-Isang</CardTitle>
+                        <CardDescription className="text-base mt-2">Apple Podcasts • Next GEN Hustle • Episode 48</CardDescription>
+                      </div>
+                      <a
+                        href="https://podcasts.apple.com/us/podcast/episode-48-how-women-pivot-they-find-their-true-passion/id1736747702?i=1000685658014"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-shrink-0"
+                      >
+                        <Button size="sm" variant="outline">
+                          Listen
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </a>
+                    </div>
+                  </CardHeader>
+                </Card>
+
+                <Card className="hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                      <div className="flex-1">
+                        <CardTitle>Healthcare Journeys: How Women Pivot and Succeed</CardTitle>
+                        <CardDescription className="text-base mt-2">Spotify • S2M Health • Episode 1</CardDescription>
+                      </div>
+                      <a
+                        href="https://open.spotify.com/episode/1i0PO5rpQYk697XTIE2ozL?si=WbkNoVPESx2PvtYsUCvneQ&nd=1&dlsi=6a49186bcad84f46"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-shrink-0"
+                      >
+                        <Button size="sm" variant="outline">
+                          Listen
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </a>
+                    </div>
+                  </CardHeader>
+                </Card>
+
+                <Card className="hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                      <div className="flex-1">
+                        <CardTitle>Next Gen Hustle – Every Youth Can Have Jobs</CardTitle>
+                        <CardDescription className="text-base mt-2">Spotify • Nigeria</CardDescription>
+                      </div>
+                      <a
+                        href="https://open.spotify.com/episode/2tcI2kodyOmNvu6MNKIgbq?si=oLS6S45iR4eh05IgjpdJEg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-shrink-0"
+                      >
+                        <Button size="sm" variant="outline">
+                          Listen
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </a>
+                    </div>
+                  </CardHeader>
+                </Card>
+
+                <Card className="hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                      <div className="flex-1">
+                        <CardTitle>Healthcare Journeys - How Women Pivot</CardTitle>
+                        <CardDescription className="text-base mt-2">YouTube • S2M Health</CardDescription>
+                      </div>
+                      <a
+                        href="https://www.youtube.com/watch?v=c7CIE6fGasI"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-shrink-0"
+                      >
+                        <Button size="sm" variant="outline">
+                          Watch
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </a>
+                    </div>
+                  </CardHeader>
+                </Card>
+              </div>
+            </div>
+          </div>
+
+          {/* Conferences */}
+          <div>
+            <h3 className="text-2xl font-bold mb-8">Conference Speaking</h3>
+            <div className="space-y-4">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                    <div className="flex-1">
+                      <CardTitle>VBC from Strategy to Execution</CardTitle>
+                      <CardDescription className="text-base mt-2">Rise Conference • June 2025 • Scottsdale, Arizona</CardDescription>
+                    </div>
+                    <a
+                      href="https://www.risehealth.org/insights-articles/article/the-rise-value-based-care-summit-an-inside-look-at-the-all-new-pre-conference-workshop/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-shrink-0"
+                    >
+                      <Button size="sm" variant="outline">
+                        Learn More
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </a>
+                  </div>
+                </CardHeader>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0">
